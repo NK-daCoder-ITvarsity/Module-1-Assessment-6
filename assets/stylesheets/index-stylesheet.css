@@ -177,14 +177,24 @@ a.navigation__link {
     padding-right: 2rem;
 }
 
+.companies-that-trust-us__logos {
+    margin-top: 2em;
+    margin-right: 2rem;
+    filter: grayscale();
+    width: 90px;
+    height: 70px;
+}
+
 /*--- Product card ----*/
 .product-card__text {
-    margin-top: 5em;
+    margin-top: 6em;
+    margin-left: 20px;
 }
 
 .product-card--modifier {
     display: flex;
-    margin-top: 5em;
+    margin-top: 4em;
+    margin-bottom: 15em;
 }
 
 .product-card__paragraph {
