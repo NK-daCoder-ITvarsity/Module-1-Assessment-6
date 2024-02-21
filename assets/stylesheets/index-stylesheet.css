@@ -1,0 +1,203 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grey-background: hsla(0, 0%, 92%, 0.925);
+    --white-background: white;
+    --border-radius: 1rem;
+    --blue-gradient: linear-gradient(45deg, hsl(246, 100%, 15%), hsl(224, 100%, 50%));
+}
+
+body {
+    border: 2px solid red;
+    background: var(--grey-background);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    overflow-y: auto;
+}
+
+.main-section {
+    width: 100%;
+}
+
+/*---- Reusable utils ----*/
+.section-flex--alignment {
+    display: flex;
+}
+
+.border {
+    /* Need to do something */
+    border: 1px solid white;
+}
+
+.text--modifier {
+    font-family: sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+
+.pages-section--alignment {
+    /*for consistent spaceing between pages*/
+    margin-bottom: 3em;
+    margin-left: 80px;
+    margin-right: auto;
+
+    background: var(--white-background);
+    height: 100%;
+    width: 95%;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+
+.title--modifier {
+    font-family: roboto-bold, Arial, Helvetica, sans-serif;
+}
+
+.page-heading--modifier {
+    font-family: sans-serif;
+    letter-spacing: -1px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.section-paragraph {
+    font-family: sans-serif;
+    margin-bottom: 4rem;
+}
+
+.section-shop-now-button {
+    background: var(--blue-gradient);
+    padding: .8rem;
+    border: none;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: .5rem;
+    font-size: 1rem;
+}
+
+
+.sub-heading--modifier {
+    font-size: 2rem;
+    font-family: Helvetica, sans-serif;
+}
+
+
+
+/*-- Reusable font faces*/
+@font-face {
+    font-family: roboto-bold;
+    src: url("../fonts/Roboto/RobotoCondensed-Bold.woff");
+}
+
+
+/*---- Navigation ----*/
+
+.navigation-container {
+    width: 90px;
+    height: 70%;
+    position: fixed;
+    left: 10px;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2em;
+    background: var(--white-background);
+    border-radius: var(--border-radius);
+    margin-bottom: 8em;
+}
+
+.navigation-section__company-logo {
+    padding: .2rem;
+    width: 80px;
+    height: 70px;
+    margin-left: 5px;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 3rem;
+    
+    border-radius: .5rem;
+}
+
+.list--container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: .5rem;
+}
+
+.list-container__icon-link {
+    width: 40px;
+    height: 40px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 1em;
+}
+
+a.navigation__link {
+    font-family: sans-serif;
+    font-size: .9rem;
+    text-decoration: none;
+}
+
+/*---- Home Section ----*/
+.home-title {
+    font-size: 4rem;
+    width: 500px;
+    margin-top: 5rem;
+    margin-bottom: .7rem;
+    letter-spacing: -1px;
+}
+
+.home-page__image {
+    width: 1024px;
+    height: 512px;
+    background: var(--blue-gradient);
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.home-section__paragraph {
+    width: 400px;
+    padding-right: 2rem;
+}
+
+/*--- Product card ----*/
+.product-card__text {
+    margin-top: 5em;
+}
+
+.product-card--modifier {
+    display: flex;
+    margin-top: 5em;
+}
+
+.product-card__paragraph {
+    font-family: sans-serif;
+    margin-top: 1em;
+    margin-bottom: 4em;
+    margin-right: 3rem;
+}
+
+
+
+
+
+
+
+
