@@ -1,213 +1,452 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --grey-background: hsla(0, 0%, 92%, 0.925);
-    --white-background: white;
-    --border-radius: 1rem;
-    --blue-gradient: linear-gradient(45deg, hsl(246, 100%, 15%), hsl(224, 100%, 50%));
-}
-
-body {
-    border: 2px solid red;
-    background: var(--grey-background);
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 0 0 auto;
-    overflow-y: auto;
-}
-
-.main-section {
+.body {
+    height: 100vh;
     width: 100%;
+    border: 1px solid red;
+    background: rgb(255, 255, 255);
+    overflow-x: hidden;
 }
 
-/*---- Reusable utils ----*/
-.section-flex--alignment {
-    display: flex;
-}
-
-.border {
-    /* Need to do something */
-    border: 1px solid white;
-}
-
-.text--modifier {
-    font-family: sans-serif;
-    font-size: 1rem;
-    letter-spacing: 1px;
-}
-
-
-.pages-section--alignment {
-    /*for consistent spaceing between pages*/
-    margin-bottom: 3em;
-    margin-left: 80px;
-    margin-right: auto;
-
-    background: var(--white-background);
-    height: 100%;
-    width: 95%;
-    border-radius: var(--border-radius);
-    padding: 2rem;
-}
-
-.title--modifier {
-    font-family: roboto-bold, Arial, Helvetica, sans-serif;
-}
-
-.page-heading--modifier {
-    font-family: sans-serif;
-    letter-spacing: -1px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.section-paragraph {
-    font-family: sans-serif;
-    margin-bottom: 4rem;
-}
-
-.section-shop-now-button {
-    background: var(--blue-gradient);
-    padding: .8rem;
-    border: none;
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border-radius: .5rem;
-    font-size: 1rem;
-}
-
-
-.sub-heading--modifier {
-    font-size: 2rem;
-    font-family: Helvetica, sans-serif;
-}
-
-
-
-/*-- Reusable font faces*/
 @font-face {
-    font-family: roboto-bold;
-    src: url("../fonts/Roboto/RobotoCondensed-Bold.woff");
+    font-family: poppin-black;
+    src: url("../fonts/googles-popins-font/Poppins-Regular.woff");
 }
 
-
-/*---- Navigation ----*/
-
-.navigation-container {
-    width: 90px;
-    height: 70%;
-    position: fixed;
-    left: 10px;
-    top: 40px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 2em;
-    background: var(--white-background);
-    border-radius: var(--border-radius);
-    margin-bottom: 8em;
+:root {
+    --poppin-font-default: poppin-black;
+    --product-background-card-color: hsl(231, 10%, 13%);
+    --product-card-border-radius: 20px;
 }
 
-.navigation-section__company-logo {
-    padding: .2rem;
-    width: 80px;
-    height: 70px;
-    margin-left: 5px;
-    margin-right: auto;
-    margin-top: 2em;
-    margin-bottom: 3rem;
+/*==================== NAVIGATION MENU =========================*/
+
+.ecommerce-images {
+    width: 70px;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: auto;
+    margin: auto;
+}
+
+.ecommerce-cart, .ecommerce-log-in {
+    width: 25px;
+    height: 25px;
+    margin-right: 40px;
+    margin-top: .3rem;
+}
+
+.medical-logo {
+    width: 150px;
+    height: 50px;
+    margin-right: 150px;
+    margin-left: 50px;
+    padding-bottom: .5rem;
     
-    border-radius: .5rem;
-}
-
-.list--container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: .5rem;
-}
-
-.list-container__icon-link {
-    width: 40px;
-    height: 40px;
 }
 
 .navigation {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    list-style-type: none;
-    gap: 1em;
+    flex: 0 0 auto;
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    z-index: 1;
 }
 
-a.navigation__link {
-    font-family: sans-serif;
-    font-size: .9rem;
+.navigation-list--alignment {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    font-size: 15px;
+    padding-top: 1rem;
+}
+
+.navigation-link-list {
+    font-family: var(--poppin-font-default);
+    letter-spacing: .9px;
+    list-style: none;
+    background: hsla(0, 0%, 100%, 0.493);
+    backdrop-filter: blur(2px);
+    border-radius: 1rem;
+}
+.navigation-linked-list__item {
     text-decoration: none;
 }
 
-/*---- Home Section ----*/
-.home-title {
-    font-size: 4rem;
-    width: 500px;
-    margin-top: 5rem;
-    margin-bottom: .7rem;
-    letter-spacing: -1px;
+.navigation-menu-item--right-space {
+    margin-right: 15rem;
 }
 
-.home-page__image {
-    width: 1024px;
-    height: 512px;
-    background: var(--blue-gradient);
-    border-top-left-radius: 3rem;
-    border-bottom-left-radius: 3rem;
-    padding: 1rem 1rem 0 1rem;
+.navigation-menu-item--left-space {
+    padding-top: .5rem;
+    margin-left: 3rem;
 }
 
-.home-section__paragraph {
-    width: 400px;
-    padding-right: 2rem;
+/* ================= Reusable Section Styles ====================== */
+.border {
+    border: 2px solid blue;
 }
 
-.companies-that-trust-us__logos {
-    margin-top: 2em;
-    margin-right: 2rem;
-    filter: grayscale();
-    width: 90px;
-    height: 70px;
+.section--center-align {
+    margin: 0 auto;
 }
 
-/*--- Product card ----*/
-.product-card__text {
-    margin-top: 6em;
-    margin-left: 20px;
+.section--full-view {
+    height: 100%;
+    width: auto;
 }
 
-.product-card--modifier {
-    display: flex;
-    margin-top: 4em;
-    margin-bottom: 15em;
+.main-title {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
 }
 
-.product-card__paragraph {
-    font-family: sans-serif;
+.sub-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.sub-text {
+    font-family: var(--poppin-font-default);
+    font-size: .9rem;
+    letter-spacing: .1ch;
+}
+
+.text-alignment--center {
+    text-align: center;
+}
+
+.extra--top-bottom-margin-space {
     margin-top: 1em;
-    margin-bottom: 4em;
-    margin-right: 3rem;
+    margin-bottom: .5em;
 }
 
 
+/* ======================= Widget styles ============================= */
+.shop-now-button--top-space {
+    margin-top: 100px;
+}
+
+.shop-now__button {
+    display: inline-block;
+    position: relative;
+    top: 90px;
+    width: 200px;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    font-family: var(--poppin-font-default);
+    border-radius: 10px;
+
+    transition-property: font-size, width;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+}
+
+/* ========================= HOME SECTION ================================ */
+.home-section {
+    height: 100vh;
+}
+
+.home-section--background {
+    background-image: url("../abstract-background/peakpx\ \(1\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 100px;
+
+    filter: contrast(1.15);
+}
+
+.home-section--gradient {
+    position: relative;
+    height: 100%;
+    width: 60%;
+    background: linear-gradient(90deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 100%) 60%, hsla(0, 0%, 100%, 0) 100%);
+}
+
+.hero-section__article {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    margin: 90px 90px;
+}
+
+.sub-text--left-border {
+    border-left: 5px solid blue;
+    padding-left: 1.2rem;
+}
 
 
+/* ========================= ABOUT SECTION ================================ */
+
+.about-us-section {
+    background-image: url("../abstract-background/Presentation1/Slide1.JPG");
+    background-repeat: no-repeat;
+}
+
+.about-us-section--background-left {
+    background-image: url("../abstract-background/Presentation1/Slide2.jpg");
+    background-repeat: no-repeat;
+}
+
+.about-us-history {
+    width: 100%;
+    display: flex;
+    margin: 5em auto;
+}
 
 
+.about-us__history-text {
+    width: 50%;
+    margin-bottom: 3em;
+}
+
+.about-us__history-header {
+    margin-top: 3em;
+}
+
+.about-us__history-text, .about-us__history-header {
+    margin-left: 10%;
+}
+
+.image-of-people-working-together {
+    width: 100%;
+    height: 50%;
+}
+
+.sub-text--size {
+    font-size: .8rem;
+}
+
+.image-of-people-working-together {
+    width: 50%;
+    height: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px hsl(0, 0%, 25%);
+}
+
+.why-choose-us-header-alignment {
+    margin: 5em 4em 3em 4em;
+    text-align: center;
+}
+
+.card-list {
+    display: flex;
+    justify-content: center;
+    height: 50%;
+}
+
+.card-list__card {
+    border-right: 2px solid hsl(244, 100%, 19%);
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+
+    padding: 0 2em;
+}
+
+.card-list__card:first-child {
+    border-left: 2px solid hsl(244, 100%, 19%);
+}
+
+.card__image {
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    margin-top: 1em;
+}
+
+.card__header {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 5em auto;
+}
+
+.card__text {
+    font-family: var(--poppin-font-default);
+    display: inline-block;
+    height: 100%;
+    padding-bottom: 2em;
+}
+
+.card__text--font-size {
+    font-size: .80rem;
+}
+
+/* ================================ CONTACT SECTION ======================================= */
+
+.contact-us-section {
+    height: 100vh;
+    background-image: url("../abstract-background/abstract-contact.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50%;
+    width: 100%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form--adjustments {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us--title-top-space {
+    margin-top: 2em;
+    padding: 2rem;
+    color: white;
+}
+
+.form-label--color {
+    background: none;
+    color: white;
+}
+
+.form-label--margin-top {
+    margin-top: 2em;
+}
+
+.input-border--color {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid white;
+}
+
+.contact-section__header {
+    color: white;
+}
 
 
+/*========================= PRODUCT SECTION ===============================*/
+.main-content-grid {
+    height: 100vh;
+    margin: auto 4em;
+   
+    display: grid;
+    grid-template-areas:
+        "first-box first-box first-box first-box"
+        "first-box first-box first-box first-box"
+        "second-box fourth-box third-box third-box"
+        "second-box fifth-box fifth-box fifth-box"
+        ".......... fifth-box fifth-box fifth-box"
+    ;
+    gap: 12px;
+}
+
+.box-1 {
+    grid-area: first-box;
+
+    background-image: url("../products/Card-face/da-vinci-surgical-bot.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    border-radius: 20px;
+
+    background-color: hsl(240, 10%, 12%);
+}
+
+.box-2 {
+    grid-area: second-box;
+
+    padding: 2em;
+    text-align: center;
+    border-radius: var(--product-card-border-radius);
+    background-color: var(--product-background-card-color);
+
+    background-image: url("../products/medicine-storage-bot/robot-front.png");
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 100%;
+}
+
+.box-3 {
+    grid-area: third-box;
+
+    background-image: url("../products/Card-face/0000-32-removebg-preview.png");
+    padding: 2em;
+    text-align: center;
+    background-color: var(--product-background-card-color);
+    border-radius: var(--product-card-border-radius);
+    background-repeat: no-repeat;
+}
+
+.box-4 {
+    grid-area: fourth-box;
+
+    background-image: url("../products/Card-face/bed-scanner.png");
+    border-radius: var(--product-card-border-radius);
+    background-color: var(--product-background-card-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box-5 {
+    grid-area: fifth-box;
+
+    background-image: url("../products/Card-face/soft_tissue_surgical_robot_medtronic_rigged.png");
+    border-radius: var(--product-card-border-radius);
+    background-color: var(--product-background-card-color);
+    background-repeat: no-repeat;
+    padding: 4em;
+}
+
+.main-content-grid > a {
+    text-decoration: none;
+}
+
+.sub-title--color {
+    color: white;
+    font-size: 2rem;
+}
+
+.sub-title--alignment {
+    width: 25%;
+    text-align: left;
+    margin: 2em 2em;
+}
+
+.sub-title--alignment-kelo-robot-text {
+    width: 100%;
+    text-align: right;
+}
+
+.sub-title--alignment--MIR-bed {
+    text-align: center;
+    margin-top: 65%;
+}
+
+.surgical-soft-tissue-text--alignment {
+   width: 100%;
+   text-align: right;
+}
