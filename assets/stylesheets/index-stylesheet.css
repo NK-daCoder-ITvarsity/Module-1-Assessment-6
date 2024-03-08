@@ -1,452 +1,463 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-.body {
-    height: 100vh;
-    width: 100%;
-    border: 1px solid red;
-    background: rgb(255, 255, 255);
-    overflow-x: hidden;
+html {
+    font-size: 100%;
 }
 
-@font-face {
-    font-family: poppin-black;
-    src: url("../fonts/googles-popins-font/Poppins-Regular.woff");
+/*======================================== REUSABLE-UTILITY ====================================================*/
+
+/*================ FONT-SIZES ========================*/
+.font-size--large {
+    font-size: large;
 }
 
-:root {
-    --poppin-font-default: poppin-black;
-    --product-background-card-color: hsl(231, 10%, 13%);
-    --product-card-border-radius: 20px;
+.font-size--medium {
+    font-size: clamp(0.9rem, calc(0.9rem + ((1vw - 0.32rem) * 1.0096)), 3rem);
 }
 
-/*==================== NAVIGATION MENU =========================*/
-
-.ecommerce-images {
-    width: 70px;
-    margin-top: 10px;
-    margin-left: 10px;
-    height: auto;
-    margin: auto;
+.font-size--small {
+    font-size: clamp(0.5rem, calc(0.5rem + ((1vw - 0.16rem) * 0.641)), 2rem);
 }
 
-.ecommerce-cart, .ecommerce-log-in {
-    width: 25px;
-    height: 25px;
-    margin-right: 40px;
-    margin-top: .3rem;
+.font-size--extra-large {
+    font-size: clamp(2rem, calc(2rem + ((1vw - 0.32rem) * 3.3654)), 9rem);
 }
 
-.medical-logo {
-    width: 150px;
-    height: 50px;
-    margin-right: 150px;
-    margin-left: 50px;
-    padding-bottom: .5rem;
-    
+/*================ FONT-WEIGHTS ========================*/
+.font--light {
+    font-weight: 300;
 }
 
-.navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 0 0 auto;
-    position: fixed;
-    left: 50%;
-    right: 50%;
-    z-index: 1;
+.font--normal {
+    font-weight: 400;
 }
 
-.navigation-list--alignment {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    gap: 15px;
-    font-size: 15px;
-    padding-top: 1rem;
+.font--bold {
+    font-weight: 700;
 }
 
-.navigation-link-list {
-    font-family: var(--poppin-font-default);
-    letter-spacing: .9px;
-    list-style: none;
-    background: hsla(0, 0%, 100%, 0.493);
-    backdrop-filter: blur(2px);
-    border-radius: 1rem;
-}
-.navigation-linked-list__item {
-    text-decoration: none;
-}
-
-.navigation-menu-item--right-space {
-    margin-right: 15rem;
-}
-
-.navigation-menu-item--left-space {
-    padding-top: .5rem;
-    margin-left: 3rem;
-}
-
-/* ================= Reusable Section Styles ====================== */
-.border {
-    border: 2px solid blue;
-}
-
-.section--center-align {
-    margin: 0 auto;
-}
-
-.section--full-view {
-    height: 100%;
-    width: auto;
-}
-
-.main-title {
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 3.5rem;
-    margin-bottom: 2rem;
-}
-
-.sub-title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.sub-text {
-    font-family: var(--poppin-font-default);
-    font-size: .9rem;
-    letter-spacing: .1ch;
-}
-
-.text-alignment--center {
+/*================ FONT-ALIGNMENT ========================*/
+.font-alignment--center {
     text-align: center;
 }
 
-.extra--top-bottom-margin-space {
-    margin-top: 1em;
-    margin-bottom: .5em;
-}
-
-
-/* ======================= Widget styles ============================= */
-.shop-now-button--top-space {
-    margin-top: 100px;
-}
-
-.shop-now__button {
-    display: inline-block;
-    position: relative;
-    top: 90px;
-    width: 200px;
-    padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    background-color: blue;
-    color: white;
-    font-family: var(--poppin-font-default);
-    border-radius: 10px;
-
-    transition-property: font-size, width;
-    transition-duration: 150ms;
-    transition-timing-function: ease-in-out;
-}
-
-/* ========================= HOME SECTION ================================ */
-.home-section {
-    height: 100vh;
-}
-
-.home-section--background {
-    background-image: url("../abstract-background/peakpx\ \(1\).jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: 100px;
-
-    filter: contrast(1.15);
-}
-
-.home-section--gradient {
-    position: relative;
-    height: 100%;
-    width: 60%;
-    background: linear-gradient(90deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 100%) 60%, hsla(0, 0%, 100%, 0) 100%);
-}
-
-.hero-section__article {
-    display: inline-block;
-    width: 100%;
-    position: absolute;
-    top: 100px;
-    margin: 90px 90px;
-}
-
-.sub-text--left-border {
-    border-left: 5px solid blue;
-    padding-left: 1.2rem;
-}
-
-
-/* ========================= ABOUT SECTION ================================ */
-
-.about-us-section {
-    background-image: url("../abstract-background/Presentation1/Slide1.JPG");
-    background-repeat: no-repeat;
-}
-
-.about-us-section--background-left {
-    background-image: url("../abstract-background/Presentation1/Slide2.jpg");
-    background-repeat: no-repeat;
-}
-
-.about-us-history {
-    width: 100%;
-    display: flex;
-    margin: 5em auto;
-}
-
-
-.about-us__history-text {
-    width: 50%;
-    margin-bottom: 3em;
-}
-
-.about-us__history-header {
-    margin-top: 3em;
-}
-
-.about-us__history-text, .about-us__history-header {
-    margin-left: 10%;
-}
-
-.image-of-people-working-together {
-    width: 100%;
-    height: 50%;
-}
-
-.sub-text--size {
-    font-size: .8rem;
-}
-
-.image-of-people-working-together {
-    width: 50%;
-    height: 50%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-right: 5%;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px hsl(0, 0%, 25%);
-}
-
-.why-choose-us-header-alignment {
-    margin: 5em 4em 3em 4em;
-    text-align: center;
-}
-
-.card-list {
-    display: flex;
-    justify-content: center;
-    height: 50%;
-}
-
-.card-list__card {
-    border-right: 2px solid hsl(244, 100%, 19%);
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    gap: 10px;
-
-    padding: 0 2em;
-}
-
-.card-list__card:first-child {
-    border-left: 2px solid hsl(244, 100%, 19%);
-}
-
-.card__image {
-    display: block;
-    width: 60%;
-    height: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5px;
-    margin-top: 1em;
-}
-
-.card__header {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    padding: 5em auto;
-}
-
-.card__text {
-    font-family: var(--poppin-font-default);
-    display: inline-block;
-    height: 100%;
-    padding-bottom: 2em;
-}
-
-.card__text--font-size {
-    font-size: .80rem;
-}
-
-/* ================================ CONTACT SECTION ======================================= */
-
-.contact-us-section {
-    height: 100vh;
-    background-image: url("../abstract-background/abstract-contact.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50%;
-    width: 100%;
-    margin-top: 10%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.form--adjustments {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-us--title-top-space {
-    margin-top: 2em;
-    padding: 2rem;
-    color: white;
-}
-
-.form-label--color {
-    background: none;
-    color: white;
-}
-
-.form-label--margin-top {
-    margin-top: 2em;
-}
-
-.input-border--color {
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 2px solid white;
-}
-
-.contact-section__header {
-    color: white;
-}
-
-
-/*========================= PRODUCT SECTION ===============================*/
-.main-content-grid {
-    height: 100vh;
-    margin: auto 4em;
-   
-    display: grid;
-    grid-template-areas:
-        "first-box first-box first-box first-box"
-        "first-box first-box first-box first-box"
-        "second-box fourth-box third-box third-box"
-        "second-box fifth-box fifth-box fifth-box"
-        ".......... fifth-box fifth-box fifth-box"
-    ;
-    gap: 12px;
-}
-
-.box-1 {
-    grid-area: first-box;
-
-    background-image: url("../products/Card-face/da-vinci-surgical-bot.png");
-    background-repeat: no-repeat;
-    background-position-x: center;
-    border-radius: 20px;
-
-    background-color: hsl(240, 10%, 12%);
-}
-
-.box-2 {
-    grid-area: second-box;
-
-    padding: 2em;
-    text-align: center;
-    border-radius: var(--product-card-border-radius);
-    background-color: var(--product-background-card-color);
-
-    background-image: url("../products/medicine-storage-bot/robot-front.png");
-    background-repeat: no-repeat;
-    background-position-x: 90%;
-    background-position-y: 100%;
-}
-
-.box-3 {
-    grid-area: third-box;
-
-    background-image: url("../products/Card-face/0000-32-removebg-preview.png");
-    padding: 2em;
-    text-align: center;
-    background-color: var(--product-background-card-color);
-    border-radius: var(--product-card-border-radius);
-    background-repeat: no-repeat;
-}
-
-.box-4 {
-    grid-area: fourth-box;
-
-    background-image: url("../products/Card-face/bed-scanner.png");
-    border-radius: var(--product-card-border-radius);
-    background-color: var(--product-background-card-color);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.box-5 {
-    grid-area: fifth-box;
-
-    background-image: url("../products/Card-face/soft_tissue_surgical_robot_medtronic_rigged.png");
-    border-radius: var(--product-card-border-radius);
-    background-color: var(--product-background-card-color);
-    background-repeat: no-repeat;
-    padding: 4em;
-}
-
-.main-content-grid > a {
-    text-decoration: none;
-}
-
-.sub-title--color {
-    color: white;
-    font-size: 2rem;
-}
-
-.sub-title--alignment {
-    width: 25%;
+.font-alignment--left {
     text-align: left;
-    margin: 2em 2em;
 }
 
-.sub-title--alignment-kelo-robot-text {
-    width: 100%;
+.font-alignment--right {
     text-align: right;
 }
 
-.sub-title--alignment--MIR-bed {
-    text-align: center;
-    margin-top: 65%;
+/*================ FONT-ALIGNMENT ========================*/
+.link-underline--no-underline {
+    text-decoration: none;
 }
 
-.surgical-soft-tissue-text--alignment {
-   width: 100%;
-   text-align: right;
+.link-bullet--no-bullet {
+    list-style: none;
+}
+
+/*================ FONT-COLOR ========================*/
+.font-color--white {
+    color: white;
+}
+
+.font-color--black {
+    color: black;
+}
+
+/*================ MARGIN UTILS ========================*/
+.margin-alignment--right {
+    margin-left: auto;
+}
+
+.margin-alignment--left {
+    margin-right: auto;
+}
+
+.margin-alignment--center-element {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*================ IMAGES ========================*/
+
+.image--responsive {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/*================ FONT-FACES ========================*/
+@font-face {
+    font-family: google-poppin-regular;
+    src: url("../fonts/googles-popins-font/Poppins-Regular.woff");
+}
+
+@font-face {
+    font-family: google-poppin-medium;
+    src: url("../fonts/googles-popins-font/Poppins-Medium.woff");
+}
+
+@font-face {
+    font-family: google-poppin-bold;
+    src: url("../fonts/googles-popins-font/Poppins-SemiBold.woff");
+}
+
+
+/*================ TABLE STYLES ========================*/
+
+.table-border--collase {
+    border-collapse: collapse;
+}
+
+.table-data--left-border {
+    border-left: var(--table-border-color);
+}
+
+.table-data--right-border {
+    border-right: var(--table-border-color);
+}
+
+.table-row--padding {
+    padding: clamp(0.5rem, calc(0.5rem + ((1vw - 0.0005rem) * 52.6316)), 1rem);
+}
+
+.table-text--padding {
+    padding: clamp(0.5rem, calc(0.5rem + ((1vw - 0.0005rem) * 52.6316)), 1rem);
+}
+
+.row-border--top {
+    border-top: 1px solid black;
+}
+
+.row-border--below {
+    border-bottom: 1px solid black;
+}
+
+.row-border--all-round {
+    border: 1px solid black;
+}
+
+.table-data-border--left {
+    border-left: 1px solid black;
+}
+
+
+/*================ PADDING ========================*/
+.all-round--top-right-bottom-padding {
+    padding-top: clamp(0.6em, calc(0.6rem + ((1vw - 0.0005em) * 42.1053)), 1em);
+    padding-right: clamp(0.6em, calc(0.6rem + ((1vw - 0.0005em) * 42.1053)), 1em);
+    padding-bottom: clamp(0.6em, calc(0.6rem + ((1vw - 0.0005em) * 42.1053)), 1em);
+}
+
+
+/*================ ANIMATIONS ========================*/
+@keyframes slide-in-from-right{
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear{
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(100%);
+        opacity: 1;
+    }
+}
+
+
+/*================ REUSABLE VARIABLES ========================*/
+:root {
+    --gradient-background: linear-gradient(45deg, hsl(240, 100%, 32%), hsl(202, 100%, 50%), hsl(216, 100%, 50%));
+    --white-gradient-overlay: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 79%, rgba(255,255,255,0) 100%);
+    --black-white-gradient: linear-gradient(hsl(0, 0%, 0%), hsl(0, 0%, 22%), hsl(0, 0%, 0%));
+
+    --border-radius: 10px;
+    --layout-padding: clamp(1em, calc(1rem + ((1vw - 0.32em) * 2.4038)), 6em);
+    
+    --link-top-padding: 2em;
+
+
+    --poppins-regular: google-poppin-regular;
+    --poppins-medium: google-poppin-medium;
+    --poppins-large-bold: google-poppin-bold;
+    
+    
+    --responsive-font-screen-size-button: clamp(0.4rem, calc(0.4rem + ((1vw - 0.32rem) * 0.7692)), 2rem);
+}
+
+
+/*========================================== Navigation ===========================================================*/
+@media (min-width: 700px) {
+    .main-navigation {
+        display: flex;
+        justify-content: space-evenly;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: white;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .navigation-unordered-list {
+        display: flex;
+        gap: 120px;
+        font-family: var(--poppins-regular);
+        padding-bottom: 1em;
+    }
+
+    .meditech-logo {
+        width: 150px;
+        height: 60px;
+    }
+
+    .navigation-image {
+        display: none;
+    }
+}
+
+/*======================================== PRODUCT HOME SECTION ====================================================*/
+
+.home-section {
+    margin-top: 4em;
+    height: 100vh;
+    padding: var(--layout-padding);
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    grid-template-areas:
+        "text-area text-area hero-image hero-image"
+        "text-area text-area hero-image hero-image"
+        "logos logos logos logos"
+    ;
+}
+
+.text-area {
+    grid-area: text-area;
+}
+
+.hero-section__image {
+    grid-area: hero-image;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+}
+
+.companies-trusted__logos {
+    grid-area: logos;
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+
+    filter: grayscale();
+    width: 100%;
+    height: auto;
+}
+
+.logo-image {
+    width: 100px;
+    height: 90px;
+}
+
+.home-section__heading {
+    font-family: var(--poppins-large-bold);
+}
+
+.section-text--left-border {
+    border-left: 3px solid blue;
+    padding-left: 1em;
+}
+
+.home-section__paragraph {
+    margin-top: 1em;
+    margin-bottom: 5em;
+    font-family: var(--poppins-medium);
+    letter-spacing: 1px;
+}
+
+.trust-text--gradient-color {
+    background: -webkit-linear-gradient(hsl(240, 100%, 23%), hsl(202, 100%, 55%) ,hsl(219, 100%, 50%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.shop-now__button {
+    background: blue;
+    margin-top: 5em;
+    padding: 1em;
+    font-family: var(--poppins-medium);
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+/* =============================================== PRODUCT SECTION ========================================================= */
+
+.main-section {
+    padding: var(--layout-padding);
+}
+
+.main-section__heading {
+    font-family: var(--poppins-medium);
+}
+
+.main-product__section {
+    display: grid;
+    grid-template-columns: 1fr .8fr;
+    grid-template-rows: .5fr .4fr 1fr;
+    gap: 20px;
+    grid-template-areas:
+        "davinci bed-scanner"
+        "tube-tester kelpo"
+        "pack ..."
+    ;
+}
+
+.davinci-bot {
+    grid-area: davinci;
+    border-radius: var(--border-radius);
+}
+
+.bed-scanner {
+    grid-area: bed-scanner;
+    border-radius: var(--border-radius);
+}
+
+.tube-tester{
+    grid-area: tube-tester;
+    border-radius: var(--border-radius);
+}
+
+.storage-bot {
+    grid-area: kelpo;
+    border-radius: var(--border-radius);
+}
+
+.surgical-pack {
+    grid-area: pack;
+    border-radius: var(--border-radius);
+}
+
+.image--gradient-background {
+    background: linear-gradient(90deg, hsla(0, 0%, 29%, 0.678), hsl(0, 0%, 85%));
+}
+
+/*======================================== ABOUT US ====================================================*/
+
+.section--grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "text-area grid-image"
+        "text-area grid-image"
+    ;
+
+    gap: 20px;
+    padding: var(--layout-padding);
+}
+
+.about-section__head {
+    padding: var(--layout-padding);
+    font-family: var(--poppins-medium);
+}
+
+.grid-text__area {
+    grid-area: text-area;
+}
+
+.grid-text-area__header {
+    font-family: var(--poppins-regular);
+    margin-bottom: 1em;
+}
+
+.grid-text-area__paragraph {
+    font-family: var(--poppins-regular);
+}
+
+.grid-image {
+    grid-area: grid-image;
+    width: 100%;
+    height: 100%;
+
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 5px hsla(0, 0%, 0%, 0.493);
+}
+
+.product--font {
+    font-family: var(--poppins-regular);
+}
+
+/*====================================================== CONTACT US ====================================*/
+
+.contact-us {
+    height: 100vh;
+    background-image: url("../abstract-background/abstract-contact.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: var(--layout-padding);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .2fr 1fr;
+    grid-template-areas:
+        "header-1 header-1 header-1"
+        "header-2 form form"
+    ;
+}
+
+.contact-us__header-1 {
+    grid-area: header-1;
+    font-family: var(--poppins-medium);
+}
+
+.contact-us__header-2 {
+    grid-area: header-2;
+
+    font-family: var(--poppins-regular);
+    color: white;
+    text-align: center;
+    padding-top: 8em;
+}
+
+.form {
+    grid-area: form;
+
+    color: white;
+    font-family: var(--poppins-regular);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 8em;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.input-box--remove-border {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid white;
+    background: none;
+}
+
+.input-text--color {
+    color: white;
 }

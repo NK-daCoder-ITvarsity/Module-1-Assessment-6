@@ -1,24 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediTech</title>
-    <link rel="stylesheet" href="../../assets/stylesheets/index-stylesheet.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MediTech: Surgical Tissue</title>
+        <link rel="stylesheet" href="../../assets/stylesheets/index-stylesheet.css">
+        <link rel="stylesheet" href="../stylesheets/product-stylesheet/product-stylesheet.css">
+        <link rel="stylesheet" href="../stylesheets/product-stylesheet/mobile-responsive/skin-pack.css">
+    </head>
 <body>
-    <header class="header-section" role="banner">
-        <nav class="navigation" role="navigation"> 
-            <ul class="navigation-link-list navigation-list--alignment">
-                <li><img src="../icons/ecomerce-medical-logo.svg" class="medical-logo"/></li>
-                <li class="navigation-menu-item--left-space"><a href="../../index.html" class="navigation-linked-list__item">Home</a></li>
-                <li class="navigation-menu-item--left-space"><a href="../../index.html#about-us" class="navigation-linked-list__item">About</a></li>
-                <li class="navigation-menu-item--left-space navigation-menu-item--right-space"><a href="../../index.html#contact-us" class="navigation-linked-list__item">Contact</a></li>
-                <li><img src="../../assets/icons/log-in-icon.svg" class="ecommerce-log-in"/></li>
-                <li><img src="../../assets/icons/shopping-card.svg" class="ecommerce-cart"/></li>
-            </ul> 
+    <header>
+        <nav class="main-navigation">
+            <img src="../icons/ecomerce-medical-logo.svg" alt="business logo called meditech" class="meditech-logo">
+            <ul class="navigation-unordered-list font-size--small">
+                <li class="navigation-unordered-list__item link-bullet--no-bullet grid-item-1">
+                    <a href="../../index.html" class="link-underline--no-underline">
+                        <img src="../../assets/icons/android-nav-icons/dark/home.svg" alt="a image of a house" class="navigation-image"><br>
+                        Home
+                    </a>
+                </li>
+                <li class="navigation-unordered-list__item link-bullet--no-bullet font-size--small grid-item-2">
+                    <a href="../../index.html#contact-us" class="link-underline--no-underline">
+                        <img src="../../assets/icons/android-nav-icons/dark/contact.svg" alt="image of a guy speaking on a phone" class="navigation-image"><br>
+                        Contact Us
+                    </a>
+                </li>
+                <li class="navigation-unordered-list__item link-bullet--no-bullet font-size--small grid-item-3">
+                    <a href="../../index.html#about-us" class="link-underline--no-underline">
+                        <img src="../../assets/icons/android-nav-icons/dark/about-us.svg" alt="an image of a stick person" class="navigation-image"><br>
+                        About Us
+                    </a>
+                </li>
+            </ul>
         </nav>
     </header>
-    
+
+    <main class="main-area--layout">
+        <h1 class="product-header font-alignment--center">Medi Special Delux</h1>
+
+        <article class="article-summary">
+            <p class="article-text font-size--medium">
+                Introducing the Skin Surgical Suite: Your Comprehensive Solution for Dermatological Procedures.<br><br>
+
+                Welcome to the future of dermatological care with our innovative Skin Surgical Suite. 
+                Our suite combines three cutting-edge devices designed to revolutionize skin surgery and 
+                enhance patient outcomes. Let's explore each component:
+            </p>
+            <p class="article-text font-size--medium">Stock Available: 15</p>
+            <p class="article-text font-size--medium">Price: R2 200, 00</p>
+            <a href="#" class="article-text add-to-cart-button link-underline--no-underline font-size--medium" role="button">Add To Cart</a><br>
+            <a href="#" class="article-text buy-now-button link-underline--no-underline font-size--medium" role="button">Buy Now</a>
+        </article>
+
+        <div class="product-cataloge">
+            <img src="../../assets/products/soft-tissue-surgical-bot/soft_tissue_surgical_robot_medtronic_rigged_360-18.jpg" id="image-1" class="image--smaller image-1--layout-top">
+            <img src="../../assets/products/soft-tissue-surgical-bot/soft_tissue_surgical_robot_medtronic_rigged_360-42.jpg" id="image-2" class="image--smaller image-2--layout-middle image--responsive">
+            <img src="../../assets/products/soft-tissue-surgical-bot/soft_tissue_surgical_robot_medtronic_rigged_360-69.jpg" id="image-4" class="image--smaller image-4--layout-lower image--responsive">
+        </div>
+
+        <section class="description-table">
+            <table class="table table-border--collapse">
+                <thead class="table--all-border">
+                    <th class="table-data--left-border ">Component</th>
+                    <th class="table-data--left-border ">Features</th>
+                    <th class="table-data--left-border ">Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-border--left--right--bottom font-size--small">Dermascope Pro</td>
+                        <td class="table-border--left--right--bottom font-size--small">High-resolution imaging, dual-layer visualization, real-time monitoring</td>
+                        <td class="table-border--left--right--bottom font-size--small">
+                            The Dermascope Pro offers advanced imaging capabilities, 
+                            providing high-resolution views of both the outer and inner layers of the skin. 
+                            It enables real-time monitoring and precise diagnosis of various skin conditions and abnormalities.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table-border--left--right--bottom font-size--small">RoboDerm Surge</td>
+                        <td class="table-border--left--right--bottom font-size--small">Surgical robotic arm, precision instruments, minimally invasive surgeries</td>
+                        <td class="table-border--left--right--bottom font-size--small">
+                            RoboDerm Surge is equipped with a surgical robotic arm and precision instruments, 
+                            allowing for minimally invasive skin surgeries. Controlled by surgeons through 
+                            the ControlConsole Pro, it ensures unparalleled precision and patient safety.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table-border--left--right--bottom font-size--small">ControlConsole Pro</td>
+                        <td class="table-border--left--right--bottom font-size--small">Touchscreen interface, real-time visualization, intuitive controls</td>
+                        <td class="table-border--left--right--bottom font-size--small">
+                            The ControlConsole Pro serves as the central control hub for the Skin Surgical Suite. 
+                            Its touchscreen interface provides real-time visualization and intuitive controls for 
+                            surgeons to operate the Dermascope Pro and RoboDerm Surge seamlessly.
+                        </td>
+                    </tr>
+
+                    
+                </tbody>
+            </table>
+        </section>
+        
+
+    </main>
 </body>
 </html>

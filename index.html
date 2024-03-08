@@ -3,129 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/stylesheets/index-stylesheet.css">
     <title>MediTech</title>
+    <link rel="stylesheet" href="./assets/stylesheets/index-stylesheet.css">
+    <link rel="stylesheet" href="./assets/stylesheets/mobile-index.css">
 </head>
-<body class="body section--full-view">
-    <header class="header-section" role="banner">
-        <nav class="navigation" role="navigation"> 
-            <ul class="navigation-link-list navigation-list--alignment">
-                <li><img src="./assets/icons/ecomerce-medical-logo.svg" class="medical-logo"/></li>
-                <li class="navigation-menu-item--left-space"><a href="./index.html" class="navigation-linked-list__item">Home</a></li>
-                <li class="navigation-menu-item--left-space"><a href="#about-us" class="navigation-linked-list__item">About</a></li>
-                <li class="navigation-menu-item--left-space navigation-menu-item--right-space"><a href="#contact-us" class="navigation-linked-list__item">Contact</a></li>
-                <li><img src="./assets/icons/log-in-icon.svg" class="ecommerce-log-in"/></li>
-                <li><img src="./assets/icons/shopping-card.svg" class="ecommerce-cart"/></li>
-            </ul> 
+<body>
+    <header>
+        <nav class="main-navigation">
+            <img src="./assets/icons/ecomerce-medical-logo.svg" alt="business logo called meditech" class="meditech-logo">
+            <ul class="navigation-unordered-list font-size--small">
+                <li class="navigation-unordered-list__item link-bullet--no-bullet grid-item-1">
+                    <a href="./index.html" class="link-underline--no-underline">
+                        <img src="./assets/icons/android-nav-icons/dark/home.svg" alt="a image of a house" class="navigation-image"><br>
+                        Home
+                    </a>
+                </li>
+                <li class="navigation-unordered-list__item link-bullet--no-bullet font-size--small grid-item-2">
+                    <a href="#contact-us" class="link-underline--no-underline">
+                        <img src="./assets/icons/android-nav-icons/dark/contact.svg" alt="image of a guy speaking on a phone" class="navigation-image"><br>
+                        Contact Us
+                    </a>
+                </li>
+                <li class="navigation-unordered-list__item link-bullet--no-bullet font-size--small grid-item-3">
+                    <a href="#about-us" class="link-underline--no-underline">
+                        <img src="./assets/icons/android-nav-icons/dark/about-us.svg" alt="an image of a stick person" class="navigation-image"><br>
+                        About Us
+                    </a>
+                </li>
+            </ul>
         </nav>
     </header>
 
-    <section class="home-section home-section--background">
-        <div class="home-section--gradient"></div>
-        <article class="hero-section__article">
-            <h1 class="main-title">
-                Medical Supplies <br>You Can Trust
-            </h1>
-            <p class="sub-text sub-text--left-border">
+    
+    <section aria-label="The home section" class="home-section">  
+        <div class="text-area">
+            <h1 class="home-section__heading font-size--extra-large">Supplies You Can <b class="trust-text--gradient-color">Trust</b></h1>
+
+            <p class="home-section__paragraph section-text--left-border font-size--small">
                 Our unwavering dedication to reliability and excellence <br>
                 ensures every purchase delivers unparalleled quality and <br>
                 performance in the medical field.
             </p>
 
-            <a href="#main-content" role="button" class="shop-now__button">Shop Now</a>
-        </article>
+            <a href="#products" class="shop-now__button font-color--white link-underline--no-underline" role="button">
+                Shop Now
+            </a>
+        </div>
+
+        <div class="companies-trusted__logos">
+            <img src="./assets/Miscellanious/company-logos/community-first-medical-center.png" class="logo-image">
+            <img src="./assets/Miscellanious/company-logos/deconess-isrial-logo.png" class="logo-image">
+            <img src="./assets/Miscellanious/company-logos/harvard-medical-chool.png" class="logo-image">
+            <img src="./assets/Miscellanious/company-logos/harvard-study-medical-science.png" class="logo-image">
+            <img src="./assets/Miscellanious/company-logos/healthcare-logo-1.png" class="logo-image">
+            <img src="./assets/Miscellanious/company-logos/lake-cumberland-logo.png" class="logo-image">
+        </div>
+
+        <img src="./assets/abstract-background/three-doctors-home-background.jpg" class="hero-section__image">
     </section>
 
+    <main class="main-section" id="products">
+        <h1 class="main-section__heading">Top 5 Highly Rated Products</h1>
+        <section class="main-product__section">
+            <a href="./assets/product-webpages/davinci-bot.html" class="davinci-bot link-underline--no-underline image--gradient-background">
+                <h2 class="font-color--black font-alignment--center font-size--medium product--font">Da Vinci surigical instrument</h2>
+                <img src="./assets/products/Card-face/da-vinci-surgical-bot.png" class="image--responsive">
+            </a>
+            <a href="./assets/product-webpages/MRI-bed.html" class="bed-scanner link-underline--no-underline image--gradient-background">
+                <h2 class="font-color--black font-alignment--center font-size--medium product--font">Bed Scanner</h2>
+                <img src="./assets/products/Card-face/bed-scanner.png" class="image--responsive">
+            </a>
+            <a href="./assets/product-webpages/tub-tester.html" class="tube-tester link-underline--no-underline image--gradient-background">
+                <h2 class="font-color--black font-alignment--center font-size--medium product--font">MediCentrifuge Pro</h2>
+                <img src="./assets/products/Card-face/tube-tester.png" class="image--responsive">
+            </a>
+            <a href="./assets/product-webpages/kelpo.html" class="storage-bot link-underline--no-underline image--gradient-background">
+                <h2 class="font-color--black font-alignment--center font-size--medium product--font">Kelpo-R45</h2>
+                <img src="./assets/products/Card-face/robot-front.png" class="image--responsive">
+            </a>
+            <a href="./assets/product-webpages/surgical-soft-tissue-pack.html" class="surgical-pack link-underline--no-underline image--gradient-background">
+                <h2 class="font-color--black font-alignment--center font-size--medium product--font">Soft Tissue Surgical Pack</h2>
+                <img src="./assets/products/Card-face/soft_tissue_surgical_robot_medtronic_rigged.png" class="image--responsive">
+            </a>
+        </section>
+    </main>
+
     <section class="about-us-section" id="about-us">
-        <h2 class="main-title text-alignment--center extra--top-bottom-margin-space">About Us</h2>
-        <article class="about-us-history">
-            <div role="article" aria-label="Article Our History Text">
-                <h1 class="sub-title about-us__history-header">Our Story</h1>
-                <p class="sub-text sub-text--size about-us__history-text">
-                    At MediTech, our journey began with a mission: to transform healthcare through innovation. 
-                    Inspired by real-world challenges, we develop cutting-edge technology with a human touch.<br> 
-                    From robotic surgery systems to advanced diagnostics, our solutions empower professionals 
-                    and improve patient outcomes. <br>By choosing MediTech, clients invest in more than just 
-                    equipment—they join a movement to redefine healthcare for the better. <br>
+        <h1 class="about-section__head font-size--extra-large font-alignment--center">About Us</h1>
+        <section class="section--grid-layout">
+            <div aria-label="about us text area" class="grid-text__area">
+                <h2 class="grid-text-area__header font-size--medium">Our Story...</h2>
+                <p class="grid-text-area__paragraph font-size--small">
+                    At MediTech, our journey began with a clear mission: 
+                    to transform healthcare through innovation. 
+                    From robotic surgery systems to advanced diagnostics, 
+                    we develop cutting-edge technology with a human touch. <br><br>
+                    Inspired by real-world challenges, 
+                    our solutions empower professionals and improve patient outcomes. 
+                    By choosing MediTech, clients invest in more than just equipment—they join a movement to redefine healthcare for the better. 
                     Together, we're building a future where every patient receives exceptional care. 
                     Join us in shaping the future of medicine.
                 </p>
             </div>
-            <img src="./assets/people-working-together.jpg" alt="a group of people working together on a laptop" 
-            class="image-of-people-working-together">
-        </article>
 
-        <article class="about-us-history about-us-section--background-left">
-            <div role="article" aria-label="Article Why You Should Choose Us">
-                <h2 class="sub-title why-choose-us-header-alignment">Why You Should Choose Us</h2>
-                <ol class="why-choose-us-header-alignment card-list">
-                    <li class="card-list__card">
-                        <img src="./assets/icons/why-choose-us-icons/inovation-icon.svg" alt="An scientific infinity symbol"
-                        class="card__image">
-                        <h2 class="card__header">Inovation</h2>
-                        <p class="card__text">
-                            We pioneer cutting-edge technology that sets new standards in healthcare.
-                        </p>
-                    </li>
-
-                    <li class="card-list__card">
-                        <img src="./assets/icons/why-choose-us-icons/partnership-icon.svg" alt="An scientific infinity symbol"
-                        class="card__image">
-                        <h2 class="card__header">Partnership</h2>
-                        <p class="card__text card__text--font-size">
-                            When you choose MediTech, you're not just buying equipment—you're joining a community dedicated to advancing healthcare together.
-                        </p>
-                    </li>
-
-                    <li class="card-list__card">
-                        <img src="./assets/icons/why-choose-us-icons/compassion-icon.svg" alt="An scientific infinity symbol"
-                        class="card__image">
-                        <h2 class="card__header">Compassion</h2>
-                        <p class="card__text card__text--font-size">
-                            With a human-centric approach, we prioritize patient well-being in everything we do.
-                        </p>
-                    </li>
-                </ol>
-                
-            </div>
-                
-            
-        </article>
-    
+            <img src="./assets/people-working-together.jpg" alt="Image of people woking together on the meditech project"
+            class="grid-image">
+        </section>
     </section>
 
-    <main class="main-content-grid" id="main-content">
-        <h1 class="sub-title">Our Top Products</h1>
-        <a href="./assets/product-webpages/davinci-bot.html" class="box-1">
-            <h2 class="sub-title sub-title--color sub-title--alignment">Davinci Surgical Machines</h2>
-        </a>
-        <a href="./assets/product-webpages/kelpo.html" class="box-2">
-            <h2 class="sub-title sub-title--color sub-title--alignment-kelo-robot-text">Kelpo-R45</h2>
-        </a>
-        <a href="./assets/product-webpages/tub-tester.html" class="box-3">
-            <h2 class="sub-title sub-title--color sub-title--alignment">Tube Tester</h2>
-        </a>
-        <a href="./assets/product-webpages/MRI-bed.html" class="box-4">
-            <h2 class="sub-title sub-title--color sub-title--alignment--MIR-bed">MRI Bed Scanner</h2>
-        </a>
-        <a href="./assets/product-webpages/surgical-soft-tissue-pack.html" class="box-5">
-            <h2 class="sub-title sub-title--color surgical-soft-tissue-text--alignment">Surgical Soft Tissue Scanner</h2>
-        </a>
-    </main>
-    
-    <section class="contact-us-section" id="contact-us">
-        <h2 class="main-title text-alignment--center contact-us--title-top-space">Contact Us</h2>
-        <div role="region" aria-label="contact us section" class="form">
-            <h2 class="sub-title contact-section__header">Lets Talk...</h2>
-            <form action="#" class="form--adjustments">
-                <label for="first-name" class="sub-text form-label--color">First Name </label>
-                <input type="text" id="first-name" class="sub-text form-label--color input-border--color">
-                <label for="email" class="sub-text form-label--color form-label--margin-top">Email </label>
-                <input type="email" id="email" class="sub-text form-label--color input-border--color">
-                <label for="comment" class="sub-text form-label--color form-label--margin-top">Comment </label>
-                <textarea id="comment" class="sub-text"></textarea>
-            </form>
-        </div>
+    <section class="contact-us" id="contact-us">
+        <h1 class="contact-us__header-1 font-alignment--center font-size--extra-large font-color--white">Contact us</h1>
+        <h2 class="contact-us__header-2">Lets Talk....</h2>
+        <form action="#" class="form form--adjustments font-size--small">
+            <label for="first-name" class="sub-text form-label--color">First Name </label>
+            <input type="text" id="first-name" class="input-text--color input-box--remove-border">
+            <label for="email" class="sub-text form-label--color form-label--margin-top">Email </label>
+            <input type="email" id="email" class="input-text--color input-box--remove-border">
+            <label for="comment" class="sub-text form-label--color form-label--margin-top">Comment </label>
+            <textarea id="comment" class="sub-text"></textarea>
+        </form>
+        
+        
     </section>
+    
 </body>
 </html>

@@ -5,26 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediTech</title>
     <link rel="stylesheet" href="../../assets/stylesheets/index-stylesheet.css">
-    <link rel="stylesheet" href="../stylesheets/product-stylesheet/davinci-bot.css">
+    <link rel="stylesheet" href="../stylesheets/product-stylesheet/product-stylesheet.css">
+    <link rel="stylesheet" href="../stylesheets/product-stylesheet/mobile-responsive/davinci-bot.css">
 </head>
 <body>
-    <header class="header-section" role="banner">
-        <nav class="navigation" role="navigation"> 
-            <ul class="navigation-link-list navigation-list--alignment">
-                <li><img src="../icons/ecomerce-medical-logo.svg" class="medical-logo"/></li>
-                <li class="navigation-menu-item--left-space"><a href="../../index.html" class="navigation-linked-list__item">Home</a></li>
-                <li class="navigation-menu-item--left-space"><a href="../../index.html#about-us" class="navigation-linked-list__item">About</a></li>
-                <li class="navigation-menu-item--left-space navigation-menu-item--right-space"><a href="../../index.html#contact-us" class="navigation-linked-list__item">Contact</a></li>
-                <li><img src="../../assets/icons/log-in-icon.svg" class="ecommerce-log-in"/></li>
-                <li><img src="../../assets/icons/shopping-card.svg" class="ecommerce-cart"/></li>
-            </ul> 
+    <header>
+        <nav class="main-navigation">
+            <img src="../icons/ecomerce-medical-logo.svg" alt="business logo called meditech" class="meditech-logo">
+            <ul class="navigation-unordered-list font-size--small">
+                <li class="navigation-unordered-list__item link-bullet--no-bullet grid-item-1">
+                    <a href="../../index.html" class="link-underline--no-underline">
+                        <img src="../../assets/icons/android-nav-icons/dark/home.svg" alt="a image of a house" class="navigation-image"><br>
+                        Home
+                    </a>
+                </li>
+                <li class="navigation-unordered-list__item link-bullet--no-bullet font-size--small grid-item-2">
+                    <a href="#" class="link-underline--no-underline">
+                        <img src="../../assets/icons/android-nav-icons/dark/contact.svg" alt="image of a guy speaking on a phone" class="navigation-image"><br>
+                        Contact Us
+                    </a>
+                </li>
+                <li class="navigation-unordered-list__item link-bullet--no-bullet font-size--small grid-item-3">
+                    <a href="#" class="link-underline--no-underline">
+                        <img src="../../assets/icons/android-nav-icons/dark/about-us.svg" alt="an image of a stick person" class="navigation-image"><br>
+                        About Us
+                    </a>
+                </li>
+            </ul>
         </nav>
     </header>
 
-    <section class="product-home-section">
-        <h2>da Vinci Surgical Unit</h2>
-        <p>Unlock the da Vinci Code of Surgery with da Vinci Surgical System</p>
-    </section>
+    <main class="main-area--layout">
+        <h1 class="product-header font-alignment--center">Da Vinci Surgical Machine</h1>
 
+        <article class="article-summary">
+            <p class="article-text">
+                The da Vinci Surgical System is a groundbreaking 
+                technological marvel in the field of medicine, 
+                revolutionizing the way surgeries are performed 
+                with its precision, dexterity, 
+                and minimally invasive approach. 
+                Developed by Intuitive Surgical, 
+                the da Vinci System combines robotics, advanced imaging, 
+                and computer technology to enable surgeons to perform complex procedures with enhanced 
+                accuracy and control.
+            </p>
+            <p class="article-text">Stock Available: 15</p>
+            <p class="article-text">Price: R2 200, 00</p>
+            <a href="#" class="article-text add-to-cart-button link-underline--no-underline" role="button">Add To Cart</a><br>
+            <a href="#" class="article-text buy-now-button link-underline--no-underline" role="button">Buy Now</a>
+        </article>
+
+        <div class="product-cataloge">
+            <img src="../products/darvinci-bot/da-vinci-surgical-bot.jpg" id="image-1" class="image--smaller image-1--layout-top">
+            <img src="../products/darvinci-bot/da-vinci-surgical-bot-full-side.jpg" id="image-2" class="image--smaller image-2--layout-middle image--responsive">
+            <img src="../products/darvinci-bot/da-vinci-surgical-bot-surgical-instruments.jpg" id="image-3" class="image--smaller image-3--layout-low-middle image--responsive">
+            <img src="../products/darvinci-bot/da-vinci-surgical-bot-surgical-bed.jpg" id="image-4" class="image--smaller image-4--layout-lower image--responsive">
+        </div>
+
+        <section class="description-table">
+            <table class="table table-border--collapse">
+                <thead class="table--all-border">
+                    <th class="table-responsive--padding">Description</th>
+                    <th class="table-data--left-border ">Features</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-data--bottom-border font-size--small">Robotic Arms</td>
+                        <td class="table-border--left--right--bottom table-responsive--padding font-size--small">
+                            Three to four robotic arms equipped with surgical instruments. 
+                            <br>Mimics the natural range of motion of the human hand with precision and stability.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table-data--bottom-border font-size--small">Console</td>
+                        <td class="table-border--left--right--bottom table-responsive--padding font-size--small">
+                            Surgeon operates from a console with an ergonomic design 
+                            and intuitive interface.<br> Provides a high-definition, 
+                            3D magnified image of the surgical site.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table-data--bottom-border font-size--small">Vision System</td>
+                        <td class="table-border--left--right--bottom table-responsive--padding font-size--small">
+                            Sophisticated vision system with a high-definition camera and specialized lighting. 
+                            <br>Offers clear, magnified view of the surgical field for optimal visualization.
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="table-data--bottom-border font-size--small">EndoWrist Technology</td>
+                        <td class="table-responsive--padding table-border--left--right--bottom font-size--small">
+                            Emulates natural wrist motion with remarkable flexibility and precision. 
+                            <br>Enables maneuvering within tight spaces and performing intricate tasks with ease and accuracy.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td clas="table-data--bottom-border font-size--small">Benefits for Patients</td>
+                        <td class="table-responsive--padding table-border--left--right--bottom font-size--small">
+                            Reduced pain, shorter hospital stays, 
+                            faster recovery times, and improved surgical outcomes.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table-data--bottom-border font-size--small">Challenges</td>
+                        <td class="table-responsive--padding table-border--left--right--bottom font-size--small">
+                            High costs, need for specialized training, 
+                            and concerns about overutilization.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table-data--bottom-border font-size--small">Overall Impact</td>
+                        <td class="table-responsive--padding table-border--left--right--bottom font-size--small">
+                            Represents a significant advancement in surgical technology, <br>
+                            offering surgeons new capabilities and patients improved outcomes and quality of life.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table-data--bottom-border font-size--small">Weights</td>
+                        <td class="table-responsive--padding table-border--left--right--bottom font-size--small">
+                            Height: height ranging from approximately 1.5 to 2 meters<br>
+                            Width:  approximately 1 to 2 meters when assemballed
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </section>
+        
+
+    </main>
 </body>
 </html>

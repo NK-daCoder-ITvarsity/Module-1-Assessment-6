@@ -1,0 +1,210 @@
+
+@media (min-width: 200px) and (max-width: 700px) {
+    /*======================================= NAVIGATION ============================================*/
+    .main-navigation {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+        background: white;
+        width: 100%;
+        z-index: 1;
+        font-family: var(--poppins-medium);
+    }
+
+    .meditech-logo {
+        display: none;
+    }
+
+    .navigation-image {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navigation-unordered-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+
+        grid-template-areas: 
+            "home contact about"
+        ;
+        text-align: center;
+    }
+
+    .grid-item-1 {
+        grid-area: home;
+    }
+
+    .grid-item-2 {
+        grid-area: contact;
+    }
+
+    .grid-item-3 {
+        grid-area: about;
+    }
+
+    /* ======================================= HOMEPAGE ===================================================== */
+    .home-section {
+        margin-top: 4em;
+        height: 100vh;
+    
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-template-areas:
+            "hero-image hero-image hero-image hero-image"
+            "text-area text-area text-area text-area"
+            "logos logos logos logos"
+        ;
+        margin-bottom: 2em;
+    }
+    
+    .text-area {
+        grid-area: text-area;
+    }
+    
+    .hero-section__image {
+        grid-area: hero-image;
+        width: 100%;
+        height: 100%;
+
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+    .companies-trusted__logos {
+        grid-area: logos;
+        width: 100%;
+
+        margin-top: 2em;
+        display: flex;
+        flex-wrap: nowrap;
+        flex: 0 0 auto;
+        justify-content: center;
+        filter: grayscale();
+        overflow-y: hidden;
+        overflow-x: auto;
+        background: hsla(0, 0%, 91%, 0.37);
+        padding: 1em;
+        border-radius: var(--border-radius);
+    }
+    
+    .logo-image {
+        width: 20%;
+        height: auto;
+        flex: 0 0 auto;
+    }
+    
+    .home-section__heading {
+        font-family: var(--poppins-large-bold);
+    }
+    
+    .section-text--left-border {
+        border-left: 3px solid blue;
+        padding-left: 1em;
+    }
+    
+    .home-section__paragraph {
+        margin-top: 1em;
+        margin-bottom: 5em;
+        font-family: var(--poppins-medium);
+        letter-spacing: 1px;
+    }
+    
+    .trust-text--gradient-color {
+        background: -webkit-linear-gradient(hsl(240, 100%, 23%), hsl(202, 100%, 55%) ,hsl(219, 100%, 50%));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .shop-now__button {
+        background: blue;
+        margin-top: 5em;
+        padding: 1em;
+        font-family: var(--poppins-medium);
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    /*====================================================== CONTACT US ====================================*/
+
+    .contact-us {
+        background-image: url("../abstract-background/abstract-contact.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: var(--layout-padding);
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, .2fr);
+        grid-template-areas:
+            "header-1 header-1 header-1"
+            "header-2 header-2 header-2"
+            "form form from"
+        ;
+
+        margin-top: 2em;
+    }
+
+    /*====================================================== PRODUCT ====================================*/
+
+    .main-product__section {
+        display: grid;
+        grid-template-columns: 1fr .8fr;
+        grid-template-rows: .5fr .4fr 1fr;
+        gap: 20px;
+        grid-template-areas:
+            "davinci bed-scanner"
+            "tube-tester kelpo"
+            "pack pack"
+        ;
+        padding-top: 2em;
+        padding-bottom: 4em;
+    }
+
+    /* ========================================= About us ========================================================== */
+    .section--grid-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "grid-image grid-image"
+            "text-area text-area"
+        ;
+    
+        gap: 20px;
+        padding: var(--layout-padding);
+    }
+}
+
+@media (min-width: 700px) and (max-width: 900px){
+    .home-section {
+        margin-top: 4em;
+        height: 100vh;
+        padding: var(--layout-padding);
+    
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "hero-image hero-image hero-image hero-image"
+            "text-area text-area text-area text-area"
+            "logos logos logos logos"
+        ;
+        margin-bottom: 2em;
+    }
+
+    .hero-section__image {
+        grid-area: hero-image;
+        width: 100%;
+        height: 100%;
+
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}

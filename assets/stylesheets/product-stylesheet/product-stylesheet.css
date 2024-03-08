@@ -1,0 +1,324 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+}
+
+/*======================================== REUSABLE-UTILITY ====================================================*/
+
+/*================ FONT-SIZES ========================*/
+.font-size--large {
+    font-size: large;
+}
+
+.font-size--medium {
+    font-size: clamp(0.9rem, calc(0.9rem + ((1vw - 0.32rem) * 1.0096)), 3rem);
+}
+
+.font-size--small {
+    font-size: clamp(0.5rem, calc(0.5rem + ((1vw - 0.16rem) * 0.641)), 2rem);
+}
+
+.font-size--extra-large {
+    font-size: clamp(2rem, calc(2rem + ((1vw - 0.32rem) * 3.3654)), 9rem);
+}
+
+/*================ FONT-WEIGHTS ========================*/
+.font--light {
+    font-weight: 300;
+}
+
+.font--normal {
+    font-weight: 400;
+}
+
+.font--bold {
+    font-weight: 700;
+}
+
+/*================ FONT-ALIGNMENT ========================*/
+.font-alignment--center {
+    text-align: center;
+}
+
+.font-alignment--left {
+    text-align: left;
+}
+
+.font-alignment--right {
+    text-align: right;
+}
+
+/*================ FONT-ALIGNMENT ========================*/
+.link-underline--no-underline {
+    text-decoration: none;
+}
+
+.link-bullet--no-bullet {
+    list-style: none;
+}
+
+/*================ FONT-COLOR ========================*/
+.font-color--white {
+    color: white;
+}
+
+.font-color--black {
+    color: black;
+}
+
+/*================ MARGIN UTILS ========================*/
+.margin-alignment--right {
+    margin-left: auto;
+}
+
+.margin-alignment--left {
+    margin-right: auto;
+}
+
+.margin-alignment--center-element {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*================ IMAGES ========================*/
+
+
+
+
+/*================ FONT-FACES ========================*/
+@font-face {
+    font-family: google-poppin-regular;
+    src: url("../../fonts/googles-popins-font/Poppins-Regular.woff");
+}
+
+@font-face {
+    font-family: google-poppin-medium;
+    src: url("../../fonts/googles-popins-font/Poppins-Medium.woff");
+}
+
+@font-face {
+    font-family: google-poppin-bold;
+    src: url("../../fonts/googles-popins-font/Poppins-Bold.woff");
+}
+
+.poppins--regular-font {
+    font-family: var(--poppins-regular);
+}
+
+.poppins--bold-font {
+    font-family: var(--poppins-large-bold);
+}
+
+.poppins--medium-font {
+    font-family: var(--poppins-medium);
+}
+
+/*================ TABLE STYLES ========================*/
+
+.table-border--collapse {
+    border-collapse: collapse;
+}
+
+.table--all-border {
+    border: var(--table-border-color);
+}
+
+.table-data--left-border {
+    border-left: var(--table-border-color);
+}
+
+.table-border--left--right--bottom {
+    border-left: var(--table-border-color);
+    border-right: var(--table-border-color);
+    border-bottom: var(--table-border-color);
+}
+
+.table-data--right-border {
+    border-right: var(--table-border-color);
+}
+
+.table-data--bottom-border {
+    border-bottom: var(--table-border-color);
+}
+
+.table-row--padding {
+    padding: clamp(0.5rem, calc(0.5rem + ((1vw - 0.0005rem) * 52.6316)), 1rem);
+}
+
+.table-text--padding {
+    padding: clamp(0.5rem, calc(0.5rem + ((1vw - 0.0005rem) * 52.6316)), 1rem);
+}
+
+.row-border--top {
+    border-top: 1px solid black;
+}
+
+.row-border--below {
+    border-bottom: 1px solid black;
+}
+
+.row-border--all-round {
+    border: 1px solid black;
+}
+
+.table-data-border--left {
+    border-left: 1px solid black;
+}
+
+
+/*================ PADDING ========================*/
+.all-round--top-right-bottom-padding {
+    padding-top: clamp(0.6em, calc(0.6rem + ((1vw - 0.0005em) * 42.1053)), 1em);
+    padding-right: clamp(0.6em, calc(0.6rem + ((1vw - 0.0005em) * 42.1053)), 1em);
+    padding-bottom: clamp(0.6em, calc(0.6rem + ((1vw - 0.0005em) * 42.1053)), 1em);
+}
+
+
+/*================ ANIMATIONS ========================*/
+@keyframes slide-in-from-right{
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear{
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(100%);
+        opacity: 1;
+    }
+}
+
+
+/*================ REUSABLE VARIABLES ========================*/
+:root {
+    --border-radius: 10px;
+    --table-border-color: 1px solid hsl(0, 0%, 0%);
+    --layout-padding: clamp(1em, calc(1rem + ((1vw - 0.32em) * 2.4038)), 6em);
+    
+    --link-top-padding: 2em;
+
+
+    --poppins-regular: google-poppin-regular;
+    --poppins-medium: google-poppin-medium;
+    --poppins-large-bold: google-poppin-bold;
+    
+    
+    --responsive-font-screen-size-button: clamp(0.4rem, calc(0.4rem + ((1vw - 0.32rem) * 0.7692)), 2rem);
+    --responsive-padding: clamp(0.2em, calc(0.2rem + ((1vw - 0.32em) * 0.3846)), 1em);
+}
+
+body {
+    width: 100vw;
+}
+
+/*======================================== PRODUCT PURCHASE SECTION ====================================================*/
+.main-area--layout {
+    margin-top: 6em;
+    padding: var(--layout-padding);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: .2fr 1fr .1fr .5fr;
+   
+    grid-template-areas:
+        "header header header header"
+        "summary summary cat-image cat-image"
+        "summary summary ... ..."
+        "product-table product-table product-table product-table"
+
+    ;
+    gap: 20px;
+}
+
+.product-header {
+    grid-area: header;
+    font-family: var(--poppins-medium);
+    padding: 1em;
+}
+
+.article-summary {
+    grid-area: summary;
+    padding: 2em;
+}
+
+.product-cataloge {
+    grid-area: cat-image;
+
+    display: flex;
+    
+    flex-direction: row;
+    overflow-x: auto;
+
+    padding: var(--layout-padding);
+    gap: 20px;
+    height: 100%;
+}
+
+.description-table {
+    grid-area: product-table;
+    margin-top: 5em;
+}
+
+
+.image--smaller {
+    width: 600px;
+    height: auto;
+
+    border-radius: var(--border-radius);
+}
+
+.button-link {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    outline: solid 1px hsl(0, 0%, 79%);
+}
+
+.add-to-cart-button {
+    background: none;
+    color: blue;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.buy-now-button {
+    position: relative;
+    top: 50px;
+    background: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.article-text {
+    font-family: var(--poppins-regular);
+    margin-bottom: 2em;
+}
+
+.table {
+    width: 100%;
+    height: 100%;
+    font-family: var(--poppins-medium);
+}
+
+.table-responsive--padding {
+    padding: var(--responsive-padding);
+}
+
+
