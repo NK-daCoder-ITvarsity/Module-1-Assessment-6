@@ -13,19 +13,18 @@ The MediTech website serves as a platform for showcasing and promoting medical s
 
 ## >> Content:
 
-![desktop-version](/assets/readme-images/Picture1.png) ![mobile-version](/assets/readme-images/Picture1-mobile.png)
-
 Header Section: Displays the company logo and main navigation menu.
 Home Section: Features a hero image with a call-to-action button and logos of trusted companies.
+![desktop-version](/assets/readme-images/Picture1.png) ![mobile-version](/assets/readme-images/Picture1-mobile.png)
 
-![desktop-version](/assets/readme-images/Picture2.png) ![mobile-version](/assets/readme-images/Picture2-mobile.png)  
 Main Section: Highlights the 5 products with clickable links to individual product pages.
+![desktop-version](/assets/readme-images/Picture2.png) ![mobile-version](/assets/readme-images/Picture2-mobile.png)
 
-![desktop-version](/assets/readme-images/Picture3.png) ![mobile-version](/assets/readme-images/Picture3-mobile.png)  
 About Us Section: Provides information about the company's mission, values, and a brief history, accompanied by an image.
+![desktop-version](/assets/readme-images/Picture3.png) ![mobile-version](/assets/readme-images/Picture3-mobile.png)
 
-![desktop-version](/assets/readme-images/Picture4.png) ![mobile-version](/assets/readme-images/Picture4-mobile.png)  
-Contact Us Section: Includes a contact form for users to submit their queries or comments.
+Contact Us Section: Includes a contact form for users to submit their queries or comments.  
+![desktop-version](/assets/readme-images/Picture4.png) ![mobile-version](/assets/readme-images/Picture4-mobile.png)
 
 ## >> Getting Started
 link to website: [MediTech](https://nk-dacoder-itvarsity.github.io/Module-1-Assessment-6/)
